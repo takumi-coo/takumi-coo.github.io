@@ -1,17 +1,352 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Takumi-Coo Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Takumi Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: #222;
+      background: #f6f7f9;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f2937, #334155);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: white;
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 14px;
+      color: #334155;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      border-left: 6px solid #2563eb;
+      padding-left: 12px;
+      color: #1e293b;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1d4ed8;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e0ecff;
+      color: #1e40af;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin: 4px 4px 0 0;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Takuchi Portfolio</h1>
+  <header>
+    <h1>Takumi Portfolio</h1>
+    <p>
+      音楽情報処理・音響ソフトウェア開発・音楽制作を中心に、
+      研究と制作したプログラムをまとめたポートフォリオサイトです。
+    </p>
+  </header>
 
-  <h2>研究</h2>
-  <p>音楽情報処理・深層学習研究</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#works">Works</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <h2>作曲</h2>
-  <p>オリジナル楽曲制作</p>
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>
+        大学院で音楽情報処理に関する研究を行っています。
+        特に、楽曲同士の「どの部分が似ているのか」を可視化し、
+        ユーザが聴き比べながら音楽の類似性を理解できるシステムの開発に取り組んでいます。
+      </p>
+      <p>
+        また、研究だけでなく、シンセサイザやメロディ生成プログラムなど、
+        音楽とソフトウェアを組み合わせた制作にも取り組んでいます。
+        将来的には、ユーザにとって使いやすいシステムを設計・実装できるエンジニアを目指しています。
+      </p>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="card">
+      <h3>音楽類似度理解支援システムの研究</h3>
+      <p>
+        楽曲同士の類似性は感覚的に語られることが多く、
+        「どの部分が似ているのか」を説明することは容易ではありません。
+        そこで、複数の楽曲間の類似区間を視覚的・聴覚的に提示し、
+        ユーザが楽曲の特徴を理解しやすくする支援システムについて研究しています。
+      </p>
+
+      <h4>研究で取り組んでいること</h4>
+      <ul>
+        <li>楽曲音声からの特徴抽出</li>
+        <li>2曲間の時系列類似度マップの生成</li>
+        <li>類似区間の可視化と音声再生UIの実装</li>
+        <li>ユーザが直感的に理解できるインタフェース設計</li>
+        <li>音楽情報処理を用いた理解支援システムの検討</li>
+      </ul>
+
+      <div>
+        <span class="tag">Music Information Retrieval</span>
+        <span class="tag">Information Visualization</span>
+        <span class="tag">Human Interface</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="works">
+    <h2>Works</h2>
+
+    <div class="card">
+      <h3>音楽類似度マップ可視化アプリ</h3>
+      <p>
+        2曲間の類似度を時系列マップとして表示するPythonアプリです。
+        ユーザはマップ上の任意の範囲を選択し、
+        選択した区間に対応する2曲の音声を再生できます。
+        類似している部分を視覚的・聴覚的に確認できるようにしました。
+      </p>
+
+      <h4>工夫した点</h4>
+      <ul>
+        <li>類似度マップと音声再生を連動させた点</li>
+        <li>選択範囲内に再生バーを表示し、現在再生位置を分かりやすくした点</li>
+        <li>複数の音響特徴量を比較できるようにした点</li>
+        <li>大きな類似度行列でも扱いやすいように処理を分割した点</li>
+        <li>研究用ツールとして、実験・確認を行いやすいUIにした点</li>
+      </ul>
+
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Pygame</span>
+        <span class="tag">librosa</span>
+        <span class="tag">Audio Processing</span>
+        <span class="tag">Visualization</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>ポリフォニックシンセサイザ</h3>
+      <p>
+        Pythonで開発したソフトウェアシンセサイザです。
+        キーボード入力によるリアルタイム演奏に対応し、
+        複数音の同時発音、オシレータ、フィルタ、ADSRエンベロープなどを実装しました。
+      </p>
+
+      <h4>工夫した点</h4>
+      <ul>
+        <li>複数音を同時に鳴らせるポリフォニック再生に対応した点</li>
+        <li>ADSRエンベロープにより、音の立ち上がりや余韻を制御できるようにした点</li>
+        <li>ローパスフィルタによって音色変化を表現した点</li>
+        <li>キーボード入力によるリアルタイム演奏を可能にした点</li>
+        <li>画面上でパラメータを確認しながら調整できるようにした点</li>
+      </ul>
+
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">DSP</span>
+        <span class="tag">Synthesizer</span>
+        <span class="tag">Real Time Audio</span>
+        <span class="tag">UI</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>自動メロディ生成システム</h3>
+      <p>
+        音楽理論やコード進行をもとに、新しいメロディを自動生成するプログラムです。
+        生成したメロディはMIDIとして出力でき、DAWでの作曲に活用できるようにしました。
+      </p>
+
+      <h4>工夫した点</h4>
+      <ul>
+        <li>コード進行に合う音を優先してメロディを生成するようにした点</li>
+        <li>不自然な音程の跳躍を抑え、自然な旋律になるようにした点</li>
+        <li>リズムパターンを調整できるようにした点</li>
+        <li>MIDI出力に対応し、作曲ソフトで利用しやすくした点</li>
+        <li>音楽制作の補助ツールとして使える構成にした点</li>
+      </ul>
+
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">MIDI</span>
+        <span class="tag">Music Generation</span>
+        <span class="tag">Algorithm</span>
+        <span class="tag">Composition Support</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>オリジナル楽曲制作</h3>
+      <p>
+        DTMによるオリジナル楽曲制作を行っています。
+        作曲・編曲・ミックスを一貫して行い、
+        音楽制作の経験をソフトウェア開発や研究にも活かしています。
+      </p>
+
+      <h4>取り組んでいること</h4>
+      <ul>
+        <li>メロディ・コード進行・アレンジの制作</li>
+        <li>ボーカル曲を想定した楽曲構成の検討</li>
+        <li>DAWを用いた音源制作</li>
+        <li>ミックスにおける音量・定位・空間表現の調整</li>
+      </ul>
+
+      <div>
+        <span class="tag">Composition</span>
+        <span class="tag">Arrangement</span>
+        <span class="tag">Mixing</span>
+        <span class="tag">DTM</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="two-column">
+      <div class="card">
+        <h3>Programming</h3>
+        <ul>
+          <li>Python</li>
+          <li>HTML / CSS / JavaScript</li>
+          <li>Google Apps Script</li>
+          <li>Git / GitHub</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tools / Libraries</h3>
+        <ul>
+          <li>librosa</li>
+          <li>Pygame</li>
+          <li>NumPy</li>
+          <li>Google Sheets</li>
+          <li>GitHub Pages</li>
+          <li>Visual Studio Code</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>得意なこと</h3>
+      <ul>
+        <li>研究内容を実際に動作するプログラムとして実装すること</li>
+        <li>音声処理・Web技術・データ処理を組み合わせてシステムを作ること</li>
+        <li>目的に合わせて必要な機能を整理し、実装に落とし込むこと</li>
+        <li>音楽制作の知識を活かして、音楽系ソフトウェアを設計すること</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        GitHub：
+        <a href="https://github.com/takumi-coo" target="_blank">
+          https://github.com/takumi-coo
+        </a>
+      </p>
+      <p>
+        Portfolio：
+        <a href="https://takumi-coo.github.io" target="_blank">
+          https://takumi-coo.github.io
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Takumi. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
